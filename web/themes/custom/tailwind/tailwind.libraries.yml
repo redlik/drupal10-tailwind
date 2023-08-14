@@ -103,3 +103,8 @@ user:
     component:
       css/components/user.css:
         weight: -10
+
+tailwind:
+  css:
+    theme:
+      css/styles.css: {}
