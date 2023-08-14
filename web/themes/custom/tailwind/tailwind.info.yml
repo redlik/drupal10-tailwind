@@ -5,15 +5,18 @@ starterkit: true
 version: VERSION
 regions:
   header: 'Header'
-  logo: 'Logo'
-  primary_menu: 'Primary Menu'
-  breadcrumb: 'Breadcrumbs'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
   highlighted: 'Highlighted'
   help: 'Help'
+  logo: 'Logo'
   content: 'Content'
-  sidebar_left: 'Sidebar Left'
-  sidebar_right: 'Sidebar Right'
+  sidebar_left: 'Left sidebar'
+  sidebar_right: 'Right sidebar'
   footer: 'Footer'
+  breadcrumb: 'Breadcrumb'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
 libraries:
   - tailwind/base
   - tailwind/messages
