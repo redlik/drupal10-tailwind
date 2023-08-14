@@ -1,8 +1,19 @@
-name: tailwind
+name: Tailwind
 type: theme
 'base theme': stable9
 starterkit: true
 version: VERSION
+regions:
+  header: 'Header'
+  logo: 'Logo'
+  primary_menu: 'Primary Menu'
+  breadcrumb: 'Breadcrumbs'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_left: 'Sidebar Left'
+  sidebar_right: 'Sidebar Right'
+  footer: 'Footer'
 libraries:
   - tailwind/base
   - tailwind/messages
