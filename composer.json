@@ -16,9 +16,12 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-project-message": "^10.1",
-        "drupal/core-recommended": "^10.1"
+        "drupal/core-recommended": "^10.1",
+        "drupal/gin": "^3.0@rc",
+        "drupal/gin_toolbar": "^1.0@rc"
     },
     "conflict": {
         "drupal/drupal": "*"
