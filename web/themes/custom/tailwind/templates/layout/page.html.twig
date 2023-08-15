@@ -42,13 +42,18 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+<div>
 
-  <header role="banner">
-    {{ page.header }}
+  <header role="banner" class="bg-gray-800">
+    <div class="mx-auto max-w-7xl py-4">
+      <div class="flex justify-between">
+        {{ page.logo }}
+        {{ page.header }}
+        {{ page.primary_menu }}
+      </div>
+    </div>
   </header>
 
-  {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
   {{ page.breadcrumb }}
@@ -57,23 +62,22 @@
 
   {{ page.help }}
 
-  <main role="main">
+  <main role="main" class="mx-auto max-w-7xl">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
-      <h2 class="text-red-900 font-bold text-2xl">Hejka!</h2>
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar_first %}
+    {% if page.sidebar_left %}
       <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
+        {{ page.sidebar_left }}
       </aside>
     {% endif %}
 
-    {% if page.sidebar_second %}
+    {% if page.sidebar_right %}
       <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
+        {{ page.sidebar_right }}
       </aside>
     {% endif %}
 

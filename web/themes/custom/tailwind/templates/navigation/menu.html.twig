@@ -29,15 +29,18 @@
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
+  <div class="hidden md:block">
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
+      <ul{{ attributes.addClass('flex items-baseline space-x-4') }}>
     {% else %}
-      <ul class="menu">
+      <ul class="flex items-baseline space-x-4">
     {% endif %}
     {% for item in items %}
       {%
         set classes = [
           'menu-item',
+          'text-white',
+          'hover:text-gray-300',
           item.is_expanded ? 'menu-item--expanded',
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
@@ -51,5 +54,6 @@
       </li>
     {% endfor %}
     </ul>
+  </div>
   {% endif %}
 {% endmacro %}
