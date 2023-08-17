@@ -53,14 +53,20 @@
       </div>
     </div>
   </header>
-
+  {% if is_front %}
+   <section id="hero-area" class="w-full">
+     {{ page.hero }}
+   </section>
+  {% endif %}
   {{ page.secondary_menu }}
 
   {{ page.breadcrumb }}
+  <section class="max-w-7xl mx-auto py-6">
+    {{ page.highlighted }}
 
-  {{ page.highlighted }}
+    {{ page.help }}
+  </section>
 
-  {{ page.help }}
 
   <main role="main" class="mx-auto max-w-7xl">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -84,8 +90,10 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
+    <footer role="contentinfo" class="py-4 bg-gray-800 text-white">
+      <div class="mx-auto max-w-7xl">
+        {{ page.footer }}
+      </div>
     </footer>
   {% endif %}
 

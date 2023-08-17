@@ -8,6 +8,7 @@ regions:
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   highlighted: 'Highlighted'
+  hero: 'Hero Area'
   help: 'Help'
   logo: 'Logo'
   content: 'Content'
