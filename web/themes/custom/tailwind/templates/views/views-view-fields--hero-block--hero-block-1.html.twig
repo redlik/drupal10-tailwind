@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Theme override to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ */
+#}
+
+{{ vardumper(fields) }}
+<div style="background-image: url('{{ fields.field_background.content }}')"
+     class="object-fill w-full flex items-end pb-0 lg:pb-12 bg-center bg-no-repeat">
+  <div class="max-w-7xl mx-auto px-0 lg:px-8 flex flex-wrap items-center pt-0 pb-0 lg:py-48">
+    <div class="block lg:hidden h-1/3">
+      <img src="{{ fields.field_background.content }}" class="object-fill h-100" alt="">
+    </div>
+    <div class="w-full lg:w-1/2 p-4 lg:rounded-lg backdrop-blur" style="background-color: rgba(213, 208, 136, 0.95)">
+      <h1 class="text-3xl font-bold text-gray-800">{{ fields.title.content }}</h1>
+      <p class="my-4">
+        {{ fields.body.content }}
+      </p>
+      <a href="{{ fields.field_cta_link.content }}"
+      class="mt-8 inline-block bg-gray-700 hover:bg-gray-600 text-white rounded shadow px-4 py-2"
+      >Read more</a>
+
+    </div>
+  </div>
+</div>
